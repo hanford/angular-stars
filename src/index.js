@@ -16,7 +16,7 @@ module.exports = require('angular')
     controllerAs: 'star',
     controller: Star
   })
-  .app
+  .name
 
 function Star () {
   var state = {

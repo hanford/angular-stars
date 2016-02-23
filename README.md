@@ -1,4 +1,4 @@
-## angular-toast
+## angular-stars
 
 [Live Demo!](https://hanford.github.io/angular-stars)
 
