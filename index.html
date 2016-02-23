@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Angular Stars</title>
+    <link rel="stylesheet" href="./dist/angular-stars.css">
+    <style>
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .title {
+        font-family: sans-serif;
+        font-size: 24px;
+        margin-bottom: 24px;
+      }
+    </style>
+  </head>
+  <body ng-app="exampleApp" ng-controller="exampleCtrl">
+    <div class="center">
+      <div class="title">A small angular component for rendering stars</div>
+      <stars amount="10" max="10"></stars>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <script src="./dist/angular-stars.js"></script>
+    <script>
+      angular.module('exampleApp', [
+        'angular-stars'
+      ])
+      .controller('exampleCtrl', function ($scope) {
+        $scope.stars = 10
+      })
+    </script>
+  </body>
+</html>

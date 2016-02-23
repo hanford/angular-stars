@@ -1,0 +1,49 @@
+{
+  "name": "angular-stars",
+  "version": "1.0.0",
+  "description": "Angular component for rendering stars",
+  "main": "./src",
+  "style": "./src/angular-stars.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanford/angular-stars.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hanford/angular-stars/issues"
+  },
+  "keywords": [
+    "angular",
+    "dialog",
+    "material",
+    "modal",
+    "popup",
+    "confirm",
+    "alert"
+  ],
+  "author": "Jack Hanford <jackhanford@gmail.com> (http://www.jackhanford.com/)",
+  "dependencies": {
+    "round": "~2.0.1"
+  },
+  "devDependencies": {
+    "angular": "~1.5.0",
+    "browserify": "~13.0.0",
+    "assert-semver-operator": "~1.0.1",
+    "exposify": "~0.5.0"
+  },
+  "scripts": {
+    "test": "standard && assert-operator ./ '~'",
+    "build": "browserify -e ./src/index.js -t [exposify --expose [ --angular=angular ] ]  > ./dist/angular-stars.js && cp src/angular-stars.css dist/"
+  },
+  "peerDependencies": {
+    "angular": ">=1.5 <2"
+  },
+  "files": [
+    "src/"
+  ],
+  "standard": {
+    "ignore": [
+      "./dist/"
+    ]
+  }
+}
